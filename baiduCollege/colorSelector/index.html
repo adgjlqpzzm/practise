@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <title>colorSelector</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="color-selector">
+    <div class="loading"></div>
+    <canvas id="canvas" width="550" height="500">您的浏览器不支持canvas,请升级您的浏览器或将您的浏览器设置为极速模式</canvas>
+    <div class="num-selector">
+        <ul class="RGB-selector">
+            <li>
+                <span>R</span>
+                <div class="num-box">
+                    <input type="number" value="0">
+                    <div class="btn-box">
+                        <button class="btn-add"></button>
+                        <button class="btn-reduce"></button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>G</span>
+                <div class="num-box">
+                    <input type="number" value="0">
+                    <div class="btn-box">
+                        <button class="btn-add"></button>
+                        <button class="btn-reduce"></button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>B</span>
+                <div class="num-box">
+                    <input type="number" value="0">
+                    <div class="btn-box">
+                        <button class="btn-add"></button>
+                        <button class="btn-reduce"></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="HSL-selector">
+            <li>
+                <span>H</span>
+                <div class="num-box">
+                    <input type="number" value="0" class="num-integer">
+                    <div class="btn-box">
+                        <button class="btn-add btn-add-integer"></button>
+                        <button class="btn-reduce btn-reduce-integer"></button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>S</span>
+                <div class="num-box">
+                    <input type="number" value="0" class="num-float">
+                    <div class="btn-box">
+                        <button class="btn-add btn-add-float"></button>
+                        <button class="btn-reduce btn-reduce-float"></button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>L</span>
+                <div class="num-box">
+                    <input type="number" value="0" class="num-float">
+                    <div class="btn-box">
+                        <button class="btn-add btn-add-float"></button>
+                        <button class="btn-reduce btn-reduce-float"></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<ul class="color-text">
+    <li>CSS color: <span>#ffffff</span></li>
+    <li>RGB: <span>rgb(0,0,0)</span></li>
+    <li>HSL: <span>hsl(0,0,0)</span></li>
+</ul>
+<script type="application/javascript" src="./js/main.js"></script>
+</body>
+</html>

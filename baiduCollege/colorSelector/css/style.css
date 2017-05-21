@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+    list-style: none;
+    font-family: '微软雅黑';
+    border:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.loading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: url("../img/loading.gif") no-repeat 0%;
+    display: block;
+}
+
+.color-selector {
+    position: relative;
+    margin: 30px auto;
+    height: 500px;
+    width: 750px;
+}
+
+.canvas {
+    display: inline-block;
+}
+
+.num-selector {
+    display: inline-block;
+    float: right;
+    width: 200px;
+    height: 500px;
+}
+
+.RGB-selector {
+    height: 250px;
+    width: 160px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 0px 15px 0px;
+    border-bottom: solid 2px rgb(228, 228, 228);
+    margin: 0px 20px;
+}
+
+.HSL-selector {
+    height: 250px;
+    width: 160px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px 0px 5px 0px;
+    margin: 0px 20px;
+}
+
+.RGB-selector li:first-child span {
+    color: rgb(255, 0, 0);
+}
+
+.RGB-selector li span {
+    color: rgb(0, 255, 0);
+}
+
+.RGB-selector li:last-child span {
+    color: rgb(0, 0, 255);
+}
+
+.num-selector ul {
+
+}
+
+.num-selector ul li {
+    overflow: hidden;
+    height: 76px;
+}
+
+.num-selector ul li span {
+    float: left;
+    font-size: 24px;
+    font-weight: bolder;
+    display: inline-block;
+    height: 76px;
+    line-height: 76px;
+    margin-right: 15px;
+    width:20px;
+}
+
+.num-selector ul li .num-box {
+    display: inline-block;
+    float: left;
+    width: 120px;
+    height: 76px;
+    position: relative;
+}
+
+.num-selector ul li .num-box input {
+    display: inline-block;
+    height: 64px;
+    margin-top: 6px;
+    border: solid 2px rgb(228, 228, 228);
+    width: 120px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.num-selector ul li .num-box .btn-box {
+    display: inline-block;
+    position: absolute;
+    right:1px;
+    top:7px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+    height:61px;
+    width:30px;
+    border-left: solid 2px rgb(228,228,228);
+}
+
+.num-selector ul li .num-box .btn-box button {
+    width:100%;
+    height:50%;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.num-selector ul li .num-box .btn-box button.btn-add {
+    background-image: url('../img/up.png');
+    background-position: 50% 50%;
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.num-selector ul li .num-box .btn-box button.btn-reduce {
+    background-image: url('../img/down.png');
+    background-position: 50% 50%;
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    border-top: 1px solid #b2b2b2;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.color-text{
+    font-size: 18px;
+    width:750px;
+    margin:0 auto;
+}
+.color-text li{
+    line-height: 35px;
+    color: inherit;
+}
+.color-text li span{
+    color: inherit;
+}

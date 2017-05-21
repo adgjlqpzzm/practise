@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bigCanvas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            font-family: '微软雅黑';
+        }
+
+        #canvas {
+            margin: 10px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .buttons button {
+            background-color: aqua;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #64ff64;
+            color: #6699cc;
+            border-radius: 5px;
+            padding:5px 15px;
+            -webkit-transition: all ease-in-out 0.3s;
+            -moz-transition: all ease-in-out 0.3s;
+            -ms-transition: all ease-in-out 0.3s;
+            -o-transition: all ease-in-out 0.3s;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: #6699cc;
+            color: #64ff64;
+        }
+
+        #showText {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class='buttons'>
+    <button id="drawCircle">点我画进行画圆</button>
+    <button id="drawRect">点我进行画矩形</button>
+    <button id="drawLine">点我进行画线段</button>
+    <div id="showText">请点击按钮进行您要画的形状</div>
+</div>
+<canvas id="canvas">您的浏览器不支持canvas,请更新您的浏览器或将您的浏览器设置为极速模式</canvas>
+<script type="application/javascript" src="./js/main.js"></script>
+<script>
+
+	/**
+	 *  options  期望格式：
+	 * {
+	 * 		width:<number>画布的显示宽度
+	 * 		height:<number>画布的显示高度
+	 * 		id:<string>画布标签的id
+	 * 		imgSrc:<string>图片地址
+	 * 		drawCircle:<string>传入点击画圆的button的id
+	 * 		drawRect:<string>传入点击画矩形的button的id
+	 * 		drawLine:<string>传入点击画线段的button的id
+	 *		showText:<string>传入显示绘图信息的容器的id
+	 * }
+	 */
+	var options = {
+		width: 1024,
+		height: 768,
+		id: 'canvas',
+		imgSrc: './img/img.png',
+		drawCircle: 'drawCircle',
+		drawRect: 'drawRect',
+		drawLine: 'drawLine',
+		showText: 'showText'
+	}
+	var canvas = new Canvas(options);
+</script>
+</body>
+</html>
