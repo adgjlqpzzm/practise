@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src="/javascripts/htmlparser.js" charset="utf-8"></script>
+    <script src="/javascripts/he.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        function parse(str) {
+
+            var results = '';
+
+            try {
+                HTMLParser(he.unescape(str,{strict:true}),{
+                    start:function (tag,attrs,unary) {
+                    	//过滤掉以下这些标签
+                    	if (tag == 'script' || tag == 'style' || tag == 'iframe' || tag == 'link' || tag == 'frame'){
+                            return;
+                        }
+                        results += '<'+tag;
+                    	//过滤掉标签的所有属性，如需过滤部分属性，需详细写
+                        //for (var i = 0,len = attrs.length; i < len; i++){
+                        //  results += " " + attrs[i].name + '="' + attrs[i].escaped + '"';
+                        //}
+                        results += (unary?"/":"") + ">";
+					},
+                    end:function (tag) {
+                        results += "</" + tag + ">";
+					},
+                    chars:function (text) {
+                        results += text;
+					},
+                    comment:function (text) {
+                        results += "<!--" + text + "-->";
+					}
+                });
+
+                return results;
+
+            }
+            catch (e){
+                console.log(e);
+            }
+            finally {
+                console.log('OK!');
+            }
+		}
+    </script>
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<textarea name="name" id="txt" cols="80" rows="8">
+    <p>sks <img src="null" alt="" onerror="alert(1)"></p>
+</textarea>
+
+<button type="button" name="button" id="btn">评论</button>
+<button type="button" name="button" id="get">获取评论</button>
+
+<script type="text/javascript">
+
+	var btn = document.getElementById('btn');
+	var get = document.getElementById('get');
+	var txt = document.getElementById('txt');
+
+	btn.addEventListener('click', function () {
+
+		var xhr = new XMLHttpRequest();
+		var url = '/comment?comment=' + txt.value;
+		xhr.open('GET', url, true);
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState == 4) {
+				if (xhr.status == 200) {
+					console.log(xhr);
+				}
+				else {
+					console.log('err');
+				}
+			}
+		}
+		xhr.send();
+
+	});
+
+	get.addEventListener('click', function () {
+
+		var xhr = new XMLHttpRequest();
+		var url = '/getComment';
+		xhr.open('GET', url, true);
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState == 4) {
+				if (xhr.status == 200) {
+					//通过过滤掉标签来避免xss攻击
+					var com = parse(JSON.parse(xhr.response).comment);
+					//像这样直接通过转义字符输出，如<直接输出为&lt;等，可避免解析时直接运行。
+                    //var com = JSON.parse(xhr.response).comment;
+					var txt = document.createElement('span');
+					txt.innerHTML = com;
+					document.body.appendChild(txt);
+				}
+				else {
+            		console.log('err');
+				}
+			}
+		};
+		xhr.send();
+
+	});
+
+</script>
+
+</body>
+</html>
