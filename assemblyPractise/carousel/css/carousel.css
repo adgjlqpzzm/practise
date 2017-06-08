@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+body {
+    padding: 50px;
+    background-color: #6699cc;
+}
+
+.poster-main {
+    position: relative;
+    width: 800px;
+    height: 270px;
+}
+
+.poster-main .poster-list {
+    width: 800px;
+    height: 270px;
+}
+
+.poster-main .poster-list .poster-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 270px;
+}
+
+.poster-main .poster-list .poster-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.poster-main .poster-list .poster-item a img {
+    display: block;
+    width: 100%;
+    height:100%;
+}
+
+.poster-main .poster-btn {
+    position: absolute;
+    width: 80px;
+    height: 270px;
+    z-index: 10;
+    font-size: 48px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 270px;
+    font-weight: bolder;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.poster-main .poster-prev-btn {
+    left: 0;
+    top:0;
+}
+
+.poster-main .poster-next-btn {
+    right: 0;
+    top:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

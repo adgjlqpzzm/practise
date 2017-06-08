@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./css/carousel.css">
+</head>
+<body>
+    <div class="J_Poster poster-main">
+        <div class="poster-btn poster-prev-btn">&lt;</div>
+        <ul class="poster-list">
+            <li class="poster-item"><a href="#"><img src="./img/1.png" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="./img/2.png" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="./img/3.png" alt=""></a></li>
+            <li class="poster-item"><a href="#"><img src="./img/4.png" alt=""></a></li>
+            <!--<li class="poster-item"><a href="#"><img src="./img/5.png" alt=""></a></li>-->
+            <!--<li class="poster-item"><a href="#"><img src="./img/1.png" alt=""></a></li>-->
+            <!--<li class="poster-item"><a href="#"><img src="./img/2.png" alt=""></a></li>-->
+            <!--<li class="poster-item"><a href="#"><img src="./img/3.png" alt=""></a></li>-->
+            <!--<li class="poster-item"><a href="#"><img src="./img/4.png" alt=""></a></li>-->
+        </ul>
+        <div class="poster-btn poster-next-btn">&gt;</div>
+    </div>
+    <script src="./js/carousel.js" type="text/javascript"></script>
+    <script>
+
+        //Carousel
+
+        Carousel.init(document.getElementsByClassName('J_Poster'),[
+            {
+                width:1000,
+                height:270,
+                posterWidth:640,
+                posterHeight:270,
+                scale:0.9,
+                speed:500,
+                verticalAlign:'middle',
+                autoPlay:false,
+                delay:5000,
+            },
+
+        ]);
+
+    </script>
+
+</body>
+</html>
