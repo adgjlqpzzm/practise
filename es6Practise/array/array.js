@@ -119,11 +119,11 @@ console.log(entries.next()); // {value:undefined,done:true}
  * includes(同样识别NaN)
  */
 /*
-console.log([1,2,3].includes(2)); // true
-console.log([1,2,3].includes(4)); // false
-console.log([1,2,3].includes(NaN)); // false
-console.log([1,2,NaN].includes(NaN)); // true
-*/
+ console.log([1,2,3].includes(2)); // true
+ console.log([1,2,3].includes(4)); // false
+ console.log([1,2,3].includes(NaN)); // false
+ console.log([1,2,NaN].includes(NaN)); // true
+ */
 
 /**
  * ES6将数组空位全部转为undefined
