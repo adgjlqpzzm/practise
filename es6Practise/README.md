@@ -1,1 +1,1 @@
-es6 practise
+es6 practise from 'ECMAScript 6 Primer';
