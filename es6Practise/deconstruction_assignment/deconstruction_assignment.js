@@ -117,8 +117,8 @@ console.log(y); // 1
  */
 /*
 const [a,b,c,d,e] = 'hello';
-console.log(c); // 'l'
-console.log(e); // 'o'
+console.log(c); // 'l';
+console.log(e); // 'o';
 
 //因为字符串有length属性{length:*}
 let {length: len} = 'hello';

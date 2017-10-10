@@ -51,7 +51,7 @@ foo(); // SyntaxError: Identifier 'x' has already been decleared
 
 //可以和结构赋值默认值结合起来使用
 function foo({x:a,y:b = 5}) {
-	console.log(a,);
+	console.log(a,b);
 }
 foo({});  // undefined 5
 foo({x:1}); // 1 5
