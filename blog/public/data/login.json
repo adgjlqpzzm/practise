@@ -1,0 +1,10 @@
+{
+  "errorMsg" : "",
+  "errorType": {
+    "required": "Please enter you email and password.",
+    "mismatching": "Incorrect email or password combination."
+  },
+  "default": {
+    "errorMsg" : ""
+  }
+}

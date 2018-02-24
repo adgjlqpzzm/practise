@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>release</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>release</h1>
+    <p><%= errMsg %></p>
+    <form class="article" action="" method="post">
+      <div>
+        <p>title:</p>
+        <input type="text" name="title" value="<%= article.title %>">
+      </div>
+      <div>
+        <p>slug:</p>
+        <input type="text" name="slug" value="<%= article.slug%>">
+      </div>
+      <div>
+        <p>text:</p>
+        <textarea name="text" id="text" cols="30" rows="10"><%= article.text %></textarea>
+      </div>
+      <div>
+        <p>publish:</p>
+        <label><input type="radio" name="published" value="true" <% if (article.published.toString() == 'true') {%>checked<%} %> >yes</label>
+        <label><input type="radio" name="published" value="false" <% if (article.published.toString() == 'false') {%>checked<%} %> >no</label>
+      </div>
+      <button type="submit">release</button>
+    </form>
+    <script>
+      var form = document.getElementsByClassName("article")[0];
+      form.action = window.location.href;
+    </script>
+  </body>
+</html>

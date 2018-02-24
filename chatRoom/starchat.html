@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星星聊天室</title>
+    <style>
+        h1 {
+            font-family: 微软雅黑;
+            font-weight: bold;
+            font-size: 14px;
+            color: #006bb5;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            border: 1px solid #f0f0f0;
+            padding: 5px;
+            margin: 0 0 18px 0;
+        }
+
+        div[id^=divContainer] {
+            border: 0px;
+            margin: 10px 0;
+            padding: 3px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        div#divLeft {
+            width: 85%;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        div#divRight {
+            width: 15%;
+            background-color: #ffffff;
+            float: right;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+        }
+
+        div#divchat {
+            border: 0px;
+            margin: 10px 0;
+            padding: 3px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            position: relative;
+            height: 300px;
+            font-size: 12px;
+            overflow: auto;
+        }
+
+        table.tbDlg {
+            font-family: 微软雅黑;
+            font-weight: normal;
+            font-size: 12px;
+            background-color: #f0f0f0;
+        }
+
+        tr.trDlg, td.tdDlg {
+            background-color: #f0f0f0;
+            font-size: 10px;
+        }
+
+        textarea {
+            font-family: 微软雅黑;
+            font-size: 10px;
+            border: solid 1px #444;
+            background-color: #ffffff;
+            width: 100%;
+            resize: none;
+        }
+
+        input[type="button"] {
+            font-family: 微软雅黑;
+            border: solid 1px #808080;
+            margin: 1px;
+            border-radius: 10px;
+            width: 100px;
+            color: #ffffff;
+            background-color: #81a0b5;
+        }
+
+        input[type="button"]:hover {
+            margin: 1px;
+            background-color: #006bb5;
+        }
+
+        input[type="button"]:active {
+            margin: 1px;
+            background-color: #006bb5;
+            font-weight: bolder;
+        }
+
+        input[type="button"]:focus {
+            margin: 0px;
+            background-color: #006bb5;
+            font-weight: bold;
+        }
+
+    </style>
+    <script type="application/javascript" src="js/socket.io.js"></script>
+    <script type="application/javascript" src="js/chat.js"></script>
+</head>
+<body onload="window_onload()" onunload="window_onunload()">
+<h1>星星聊天室</h1>
+<div id="divContainer1">
+    <table class="tbDlg" border="0" cellpadding="3" cellspacing="0" width="100%">
+        <tr class="trDlg">
+            <td class="tdDlg" width="5">
+                用户名:&nbsp;
+                <input type="text" id="tbxUsername" typeof="text" value="游客" size="20">
+                <input type="button" id="btnLogin" value="登录" onclick="btnLogin_onclick();">
+                <input type="button" id="btnLogout" value="退出" onclick="btnLogout_onclick();" disabled>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="divLeft">
+    <div id="divchat"></div>
+    <div id="divContainer3">
+        <table class="tbDlg" border="0" cellpadding="3" cellspacing="0" width="100%">
+            <tr class="trDlg">
+                <td class="tdDlg" valign="top" nowrap="nowrap">对话</td>
+                <td class="tdDlg" valign="top">
+                    <textarea name="tbxMsg" id="tbxMsg" cols="255" rows="5" style="width: 100%;"></textarea>
+                </td>
+                <td class="tdDlg">
+                    <input type="button" id="btnSend" value="发送" disabled="disabled" onclick="btnSend_onclick();">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="divRight">
+    用户列表:
+</div>
+</body>
+</html>

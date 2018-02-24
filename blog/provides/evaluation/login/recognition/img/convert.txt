@@ -1,0 +1,1 @@
+convert 1.jpg -colorspace gray -normalize -threshold 50% 1.tif

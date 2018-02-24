@@ -1,0 +1,12 @@
+{
+  "article": {
+    "title": "",
+    "text": ""
+  },
+ "error": {
+   "404": "No article.",
+   "500": "Service error.",
+   "lengthError": "Invalid ID.",
+   "400": "No permission"
+ }
+}

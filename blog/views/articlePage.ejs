@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= article.title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<%- include('./includes/header.ejs', {header: header}) %>
+<h1><%= article.title %></h1>
+<p><%= article.text %></p>
+<%- include('./includes/footer.ejs', {footer: footer}) %>
+</body>
+</html>

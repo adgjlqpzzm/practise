@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<%- include('./includes/header.ejs', {header: header}) %>
+<h1>Please login.</h1>
+<p><%= errorMsg %></p>
+<form action="/login" method="post">
+    <p>
+        账号:<input type="text" name="admin" placeholder="Jaxssson">
+    </p>
+    <p>
+        密码:<input type="password" name="pwd" placeholder="请输入密码">
+    </p>
+    <p>
+        <button type="submit">登录</button>
+    </p>
+</form>
+<%- include('./includes/footer.ejs', {footer: footer}) %>
+</body>
+</html>

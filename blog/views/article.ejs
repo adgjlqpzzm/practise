@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Articles</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<%- include('./includes/header.ejs', {header: header}) %>
+<h1>Article List</h1>
+<% if( list && list.length ){ %>
+<ul class="articleList">
+    <% for(let i = 0; i < list.length; i++){ %>
+    <li>
+        <a href="/article/<%= list[i]._id %>">
+            <%= list[i].title %>
+        </a>
+    </li>
+    <% } %>
+</ul>
+<button type="button" class="loadButton">Load more articles</button>
+<% }else{ %>
+<p>No Articles</p>
+<% } %>
+<%- include('./includes/footer.ejs', {footer: footer}) %>
+<script type="text/javascript" src="/javascripts/article.js"></script>
+</body>
+</html>

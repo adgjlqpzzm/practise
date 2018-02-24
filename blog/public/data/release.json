@@ -1,0 +1,23 @@
+{
+  "article": {
+    "title": "",
+    "slug": "",
+    "published": false,
+    "text": ""
+  },
+  "errMsg": "",
+  "errType": {
+    "missingTitle": "Missing title.",
+    "missingText": "Missing text.",
+    "noArticle": "No article ID."
+  },
+  "default": {
+    "errMsg": "",
+    "article": {
+      "title": "",
+      "slug": "",
+      "published": false,
+      "text": ""
+    }
+  }
+}

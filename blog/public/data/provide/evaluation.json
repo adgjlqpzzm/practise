@@ -1,0 +1,16 @@
+{
+  "postData": {
+    "status": false,
+    "message": ""
+  },
+  "default" : {
+    "status": false,
+    "message": ""
+  },
+  "errType": {
+    "lackOfBody": "表单不能为空",
+    "lackOfID": "学号格式错误",
+    "lackOfPwd": "密码不能为空",
+    "lackOfText": "主观评价不能为空"
+  }
+}

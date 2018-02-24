@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evalution</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<%- include('../includes/header.ejs', {header: header}) %>
+<h1>Evalution</h1>
+<div>
+    <div id="errMsg" style="margin-bottom: 30px; color: #ff0000; font-size: 24px"></div>
+    <div class="studentID">
+        学号：<input type="text" placeholder="请输入学号" id="studentID" value="2015003571">
+    </div>
+    <div class="pwd">
+        密码：<input type="password" placeholder="请输入登陆教务处的密码" id="pwd" value="080039">
+    </div>
+    <div class="radio">
+        <p>1：教学态度与课前准备：师德师风，备课情况，教材选用。(默认为第一个，可修改)</p>
+        <input type="radio" name="0000000136" id="f" checked><label for="f">非常满意</label>
+        <input type="radio" name="0000000136" id="s"><label for="s">满意</label>
+        <input type="radio" name="0000000136" id="t"><label for="t">不满意</label>
+    </div>
+    <div class="radio">
+        <p>2：教学水平与授课艺术：语言表达，板书或多媒体的使用，讲课进度安排。(默认为第一个，可修改)</p>
+        <input type="radio" name="0000000137" id="f" checked><label for="f">非常满意</label>
+        <input type="radio" name="0000000137" id="s"><label for="s">满意</label>
+        <input type="radio" name="0000000137" id="t"><label for="t">不满意</label>
+    </div>
+    <div class="radio">
+        <p>3：教学方法与教学手段：引导和拓展思维，激发兴趣，培养实践能力，师生互动。(默认为第一个，可修改)</p>
+        <input type="radio" name="0000000138" id="f" checked><label for="f">非常满意</label>
+        <input type="radio" name="0000000138" id="s"><label for="s">满意</label>
+        <input type="radio" name="0000000138" id="t"><label for="t">不满意</label>
+    </div>
+    <div class="radio">
+        <p>4：教学效果：接受和掌握课程内容，应用课程内容解决问题，思维能力和学习能力的提高。(默认为第一个，可修改)</p>
+        <input type="radio" name="0000000139" id="f" checked><label for="f">非常满意</label>
+        <input type="radio" name="0000000139" id="s"><label for="s">满意</label>
+        <input type="radio" name="0000000139" id="t"><label for="t">不满意</label>
+    </div>
+    <div class="zgpj">
+        <p>主观：(默认为文本框中内容，可修改)</p>
+        <textarea name="zgpj" id="zgpj" cols="120" rows="10" style="resize: none;">该老师风趣幽默，能很好的调节上课气氛，提高学生的上课积极性。讲课具有条理性，浅显易懂。教学态度认真，做事积极负责，有自己的风格，上课富有激情</textarea>
+    </div>
+    <button type="button" id="subBtn">提交</button>
+    <div id="msgArea"></div>
+</div>
+<%- include('../includes/footer.ejs', {footer: footer}) %>
+<script type="text/javascript" src="/javascripts/provide/socket.io.js"></script>
+<script type="text/javascript" src="/javascripts/provide/evaluation.js"></script>
+</body>
+</html>

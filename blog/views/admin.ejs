@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>admin</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<%- include('./includes/header.ejs', {header: header}) %>
+<h1>admin</h1>
+<div>
+    welcome <%= admin.name %>
+<a href="/logout">logout</a>
+</div>
+<% if(!list.length){ %>
+<p>No Articles</p>
+<% }else{ %>
+<ul class="article-list">
+    <% for (var i = 0; i < list.length; i++ ) { %>
+    <li id="list-<%= list[i]._id %>">
+        <a href="/article/<%= list[i]._id %>">
+            <%= list[i].title %>
+        </a>
+        <div>
+            <a href="/admin/release/<%= list[i]._id %>">edit</a>
+            <button type="button" class="publishButton"><%= list[i].isPublished %></button>
+            <button type="button" class="deleteButton">delete</button>
+        </div>
+    </li>
+    <% } %>
+</ul>
+<% } %>
+<a href="/admin/release">new article</a>
+<%- include('./includes/footer.ejs', {footer: footer}) %>
+<script type="text/javascript" src="/javascripts/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "admin": {
+    "name": ""
+  },
+  "list": [],
+  "publishState": {
+    "published": "already published",
+    "unpublished": "unpublished"
+  }
+}
